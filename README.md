@@ -79,4 +79,4 @@ python score.py --extractions out/extracted
 
 ## How I used AI tools
 
-`[REWRITE IN YOUR OWN WORDS – 2–3 sentences. Example to adapt:]` I used Claude (Anthropic) as a sounding board and drafting partner: it helped me draft the write-up, the extraction prompt, the diagram and the prototype scripts from the design decisions I made, and I re-checked every score in the sample ranking. `[Describe at least one place where you disagreed with or corrected the AI's output, and why. It must be something you actually changed.]`
+I used Claude (Anthropic) as a drafting partner for the write-up, the extraction prompt, the diagram and the prototype scripts, working from the design decisions I made. I did not take its output as-is: several times I rewrote generated code and wording that read as generic, AI-sounding text, so the result is clearer and closer to how I would write it myself. I also found that the AI's corrections were often still wrong when it lacked context, so I gave it the full brief and my reasoning up front before asking it to change anything.
