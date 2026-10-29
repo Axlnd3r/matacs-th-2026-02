@@ -1,0 +1,107 @@
+{
+  "proposal": "D",
+  "source": "Hand-checked fixture: what a correct extraction should return. Evidence quotes are omitted because the brief asks candidates not to copy proposal text into the repo; a live run (extract.py) fills them in.",
+  "prompt_version": "extract-v1",
+  "criteria_version": "commercial-solar.v1",
+  "fields": {
+    "electrical_licence_number": {
+      "value": "ECRA/ESA #7009012",
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "electrical_licence_holder": {
+      "value": "bidder",
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "wsib_clearance": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "liability_insurance_cad": {
+      "value": 5000000,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "qualifying_projects": {
+      "value": 11,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "qualifying_projects_since_year": {
+      "value": 2021,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": "'Last five years'"
+    },
+    "total_price_cad": {
+      "value": 231000,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "completion_weeks": {
+      "value": null,
+      "status": "not_stated",
+      "evidence": null,
+      "page": null,
+      "note": "Schedule to be set after a site assessment; no committed duration"
+    },
+    "panel_warranty_years": {
+      "value": 25,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "workmanship_warranty_years": {
+      "value": 10,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "project_lead_named": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "crew_described": {
+      "value": null,
+      "status": "not_stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "safety_plan": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "performance_monitoring": {
+      "value": null,
+      "status": "not_stated",
+      "evidence": null,
+      "page": null,
+      "note": "Also offers a structural roof review (not a scored item)"
+    }
+  },
+  "embedded_instructions": []
+}

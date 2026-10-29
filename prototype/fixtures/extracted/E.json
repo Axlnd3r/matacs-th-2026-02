@@ -1,0 +1,107 @@
+{
+  "proposal": "E",
+  "source": "Hand-checked fixture: what a correct extraction should return. Evidence quotes are omitted because the brief asks candidates not to copy proposal text into the repo; a live run (extract.py) fills them in.",
+  "prompt_version": "extract-v1",
+  "criteria_version": "commercial-solar.v1",
+  "fields": {
+    "electrical_licence_number": {
+      "value": "ECRA/ESA #7003456",
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "electrical_licence_holder": {
+      "value": "bidder",
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "wsib_clearance": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "liability_insurance_cad": {
+      "value": 5000000,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "qualifying_projects": {
+      "value": 8,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "qualifying_projects_since_year": {
+      "value": 2021,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "total_price_cad": {
+      "value": 242500,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "completion_weeks": {
+      "value": 13,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "panel_warranty_years": {
+      "value": 25,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "workmanship_warranty_years": {
+      "value": 12,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "project_lead_named": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "crew_described": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": "Six-person crew"
+    },
+    "safety_plan": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "performance_monitoring": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": "24 months; also a roof load assessment"
+    }
+  },
+  "embedded_instructions": []
+}

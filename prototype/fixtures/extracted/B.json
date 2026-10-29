@@ -1,0 +1,107 @@
+{
+  "proposal": "B",
+  "source": "Hand-checked fixture: what a correct extraction should return. Evidence quotes are omitted because the brief asks candidates not to copy proposal text into the repo; a live run (extract.py) fills them in.",
+  "prompt_version": "extract-v1",
+  "criteria_version": "commercial-solar.v1",
+  "fields": {
+    "electrical_licence_number": {
+      "value": null,
+      "status": "not_stated",
+      "evidence": null,
+      "page": null,
+      "note": "No licence of the bidder's own is stated"
+    },
+    "electrical_licence_holder": {
+      "value": "subcontractor",
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": "Electrical work subcontracted to a firm not yet named"
+    },
+    "wsib_clearance": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "liability_insurance_cad": {
+      "value": 5000000,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "qualifying_projects": {
+      "value": 6,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "qualifying_projects_since_year": {
+      "value": 2022,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": "'Past four years' converted from 2026"
+    },
+    "total_price_cad": {
+      "value": 189500,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "completion_weeks": {
+      "value": 10,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "panel_warranty_years": {
+      "value": 25,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "workmanship_warranty_years": {
+      "value": 5,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "project_lead_named": {
+      "value": false,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": "Coordinator to be assigned at kickoff"
+    },
+    "crew_described": {
+      "value": null,
+      "status": "not_stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "safety_plan": {
+      "value": null,
+      "status": "not_stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "performance_monitoring": {
+      "value": null,
+      "status": "not_stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    }
+  },
+  "embedded_instructions": []
+}

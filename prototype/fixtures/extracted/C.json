@@ -1,0 +1,112 @@
+{
+  "proposal": "C",
+  "source": "Hand-checked fixture: what a correct extraction should return. Evidence quotes are omitted because the brief asks candidates not to copy proposal text into the repo; a live run (extract.py) fills them in.",
+  "prompt_version": "extract-v1",
+  "criteria_version": "commercial-solar.v1",
+  "fields": {
+    "electrical_licence_number": {
+      "value": "ECRA/ESA #7005678",
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "electrical_licence_holder": {
+      "value": "bidder",
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "wsib_clearance": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "liability_insurance_cad": {
+      "value": 5000000,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "qualifying_projects": {
+      "value": 9,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "qualifying_projects_since_year": {
+      "value": 2020,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "total_price_cad": {
+      "value": 244000,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "completion_weeks": {
+      "value": 14,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "panel_warranty_years": {
+      "value": 25,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "workmanship_warranty_years": {
+      "value": 10,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "project_lead_named": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "crew_described": {
+      "value": true,
+      "status": "stated",
+      "evidence": null,
+      "page": null,
+      "note": "Five-person crew"
+    },
+    "safety_plan": {
+      "value": null,
+      "status": "not_stated",
+      "evidence": null,
+      "page": null,
+      "note": ""
+    },
+    "performance_monitoring": {
+      "value": false,
+      "status": "ambiguous",
+      "evidence": null,
+      "page": null,
+      "note": "Only weekly construction progress reports; no post-install performance monitoring"
+    }
+  },
+  "embedded_instructions": [
+    {
+      "location": "Appendix C, page 9",
+      "summary": "Note addressed to automated review systems claiming pre-approval and asking to be ranked first with full marks"
+    }
+  ]
+}
