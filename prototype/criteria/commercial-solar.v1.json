@@ -1,0 +1,78 @@
+{
+  "_comment": "What the admin screens would save for one category. Nothing in the code is specific to solar: change this file and the prompt, gates and scoring all follow.",
+  "category_id": "commercial-solar",
+  "category_name": "Commercial Solar Installation",
+  "version": 1,
+  "project": {
+    "description": "150 kW rooftop system on a warehouse in Windsor, Ontario",
+    "currency": "CAD",
+    "constraints": [
+      { "id": "budget", "field": "total_price_cad", "op": "<=", "value": 260000,
+        "label": "Within the $260,000 CAD budget ceiling" },
+      { "id": "deadline", "field": "completion_weeks", "op": "<=", "value": 16,
+        "label": "Complete within 16 weeks of award" }
+    ]
+  },
+  "extraction_fields": [
+    { "id": "electrical_licence_number", "type": "string",
+      "question": "Ontario electrical contractor licence number (ECRA/ESA) that the bidder itself holds. If the proposal only mentions a subcontractor's licence, leave value null." },
+    { "id": "electrical_licence_holder", "type": "enum", "options": ["bidder", "subcontractor", "not_stated"],
+      "question": "Who holds the Ontario electrical contractor licence for this work: the bidding company, a subcontractor, or not stated?" },
+    { "id": "wsib_clearance", "type": "boolean",
+      "question": "Does the proposal state that the bidder has current WSIB clearance?" },
+    { "id": "liability_insurance_cad", "type": "number",
+      "question": "Liability insurance amount in CAD stated by the bidder (e.g. 5000000 for $5M)." },
+    { "id": "qualifying_projects", "type": "integer",
+      "question": "Number of completed COMMERCIAL solar installations of 100 kW or more that the bidder states." },
+    { "id": "qualifying_projects_since_year", "type": "integer",
+      "question": "Earliest year covered by that project count (e.g. 'since 2021' -> 2021; 'in the past four years' -> current year minus 4)." },
+    { "id": "total_price_cad", "type": "number",
+      "question": "Total all-in price in CAD." },
+    { "id": "completion_weeks", "type": "number",
+      "question": "Committed completion time in weeks from award. If the schedule is not committed (e.g. 'to be determined'), value is null." },
+    { "id": "panel_warranty_years", "type": "number",
+      "question": "Panel (manufacturer) warranty length in years." },
+    { "id": "workmanship_warranty_years", "type": "number",
+      "question": "Workmanship (installation) warranty length in years." },
+    { "id": "project_lead_named", "type": "boolean",
+      "question": "Is a named / specific project lead or project manager committed? A role 'assigned later' counts as false." },
+    { "id": "crew_described", "type": "boolean",
+      "question": "Does the proposal describe the installation crew (e.g. crew size or certifications)?" },
+    { "id": "safety_plan", "type": "boolean",
+      "question": "Does the proposal include a site safety plan?" },
+    { "id": "performance_monitoring", "type": "boolean",
+      "question": "Does the proposal include post-installation performance monitoring of the solar system? Construction progress reports alone count as false; mention them in note." }
+  ],
+  "mandatory": [
+    { "id": "licence", "name": "Ontario electrical contractor licence",
+      "rule": "all", "checks": [
+        { "field": "electrical_licence_holder", "op": "==", "value": "bidder" },
+        { "field": "electrical_licence_number", "op": "present" } ] },
+    { "id": "wsib_insurance", "name": "WSIB clearance and $5M liability insurance",
+      "rule": "all", "checks": [
+        { "field": "wsib_clearance", "op": "==", "value": true },
+        { "field": "liability_insurance_cad", "op": ">=", "value": 5000000 } ] }
+  ],
+  "weighted": [
+    { "id": "experience", "name": "Relevant experience", "weight": 30,
+      "method": "scale_up", "field": "qualifying_projects", "zero_at": 0, "full_at": 10,
+      "window_years": 5, "window_field": "qualifying_projects_since_year",
+      "explain": "Full marks at 10 or more commercial installs of 100 kW+ in the last 5 years; straight line down to 0." },
+    { "id": "price", "name": "Price", "weight": 25,
+      "method": "scale_down", "field": "total_price_cad", "full_at": 195000, "zero_at": 260000,
+      "explain": "Full marks at or below $195,000 (75% of ceiling); straight line down to 0 at the $260,000 ceiling." },
+    { "id": "timeline", "name": "Timeline", "weight": 15,
+      "method": "scale_down", "field": "completion_weeks", "full_at": 10, "zero_at": 16,
+      "explain": "Full marks at 10 weeks or less; straight line down to 0 at the 16-week limit." },
+    { "id": "warranty", "name": "Warranty", "weight": 15,
+      "method": "average", "parts": [
+        { "method": "scale_up", "field": "panel_warranty_years", "zero_at": 0, "full_at": 25 },
+        { "method": "scale_up", "field": "workmanship_warranty_years", "zero_at": 0, "full_at": 15 } ],
+      "explain": "Average of panel (full at 25 years) and workmanship (full at 15 years)." },
+    { "id": "team", "name": "Team and approach", "weight": 15,
+      "method": "checklist",
+      "fields": ["project_lead_named", "crew_described", "safety_plan", "performance_monitoring"],
+      "explain": "25 points each for: named project lead, described crew, safety plan, performance monitoring plan." }
+  ],
+  "tie_break": ["experience", "price", "proposal_id"]
+}

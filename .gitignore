@@ -1,0 +1,9 @@
+.env
+prototype/samples/
+prototype/out/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Assessment brief: must not be published (brief says do not copy/redistribute it)
+Matacs.md
